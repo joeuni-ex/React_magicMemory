@@ -1,9 +1,9 @@
 import "./SingleCard.css";
 import React from "react";
 
-const SingleCard = ({ card }) => {
+const SingleCard = ({ card, handleChoice }) => {
   function handleClick() {
-    console.log(card);
+    handleChoice(card);
   }
   return (
     <div className="card">
