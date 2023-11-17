@@ -30,6 +30,8 @@ function App() {
 
     setCards(shuffledCards); //섞은 카드를 저장
     setTurns(0); // 턴 수를 0으로
+    setChoiceOne(null);
+    setChoiceTwo(null);
   };
 
   //카드 선택 시 기억하기
@@ -69,6 +71,11 @@ function App() {
     setTurns((prev) => prev + 1);
     setDisabled(false); // 선택가능
   };
+
+  //페이지 시작 시 새 게임 바로 시작
+  useEffect(() => {
+    shuffleCards();
+  }, []);
 
   return (
     <div className="App">
