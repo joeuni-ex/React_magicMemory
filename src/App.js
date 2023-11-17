@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import SingleCard from "./components/SingleCard";
 
 //img폴더안에 이미지 사용
 //src의 key 값으로 이미지의 주소 값
@@ -32,14 +33,10 @@ function App() {
     <div className="App">
       <h1>Magic Match</h1>
       <button onClick={shuffleCards}>New Game</button>
+      <></>
       <div className="card-grid">
         {cards.map((card) => (
-          <div className="card" key={card.id}>
-            <div>
-              <img className="front" src={card.src} alt="card front"></img>
-              <img className="back" src="/img/cover.png" alt="card back"></img>
-            </div>
-          </div>
+          <SingleCard card={card} key={card.id} />
         ))}
       </div>
     </div>
