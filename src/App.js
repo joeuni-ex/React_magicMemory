@@ -55,7 +55,7 @@ function App() {
         resetTrun();
       } else {
         console.log("틀렸습니다!");
-        resetTrun();
+        setTimeout(resetTrun, 1000);
       }
     }
   }, [choiceOne, choiceTwo]);
